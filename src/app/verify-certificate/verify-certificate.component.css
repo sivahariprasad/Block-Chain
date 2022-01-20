@@ -1,0 +1,29 @@
+
+.sbmit{
+    background: #0065FF ;
+    border-radius: 4px;
+    color:#FFFFFF;
+    
+    font-family: Avenir-LT-65-Medium;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+    
+}
+.margin{
+
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
+.position{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:200px;
+}
+.margin-top{
+    margin-top: 75px;
+}

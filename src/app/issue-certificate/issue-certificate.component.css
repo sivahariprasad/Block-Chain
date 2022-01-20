@@ -1,0 +1,28 @@
+.padding{
+    padding-left:20px;
+    padding-right:20px;
+}
+.margin{
+    margin:20px;
+    width:100%;
+    
+}
+.position{
+    position: absolute;
+    left:25%;
+    padding-top:100px;
+}
+.sbmit{
+    background: #0065FF ;
+    border-radius: 4px;
+    color:#FFFFFF;
+   
+    font-family: Avenir-LT-65-Medium;
+    margin-left: 300px;
+}
+.head{
+    padding-left: 40%;
+}
+.center{
+    margin-left:43%;
+}

@@ -1,0 +1,56 @@
+
+<div class="margin">
+    <button style="margin-top:100px;" mat-button color="primary" class="sbmit padding center" routerLink="/verify-certificate">Go To Verify Certificate</button>
+    <div class="position">
+        <form [formGroup]="issueCertificateForm">
+        <h2 class="head">Fill Below Details</h2>
+        <mat-form-field appearance="fill" class="width30 padding" >
+            <mat-label class="placeholder">Program Title</mat-label>
+            <input
+                  matInput
+                  type="text"
+                  formControlName="course"
+                  class=""
+                  
+                />   
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="width30 padding" >
+            <mat-label class="placeholder">Student Name</mat-label>
+            <input
+                  matInput
+                  type="text"
+                  formControlName="owner"
+                  class=""
+                  
+                />   
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="width30 padding" >
+            <mat-label class="placeholder">Score</mat-label>
+            <input
+                  matInput
+                  type="text"
+                  formControlName="score"
+                  class=""
+                  
+                />   
+        </mat-form-field>
+        <div class="fifthblock" *ngIf="!id">
+            <button mat-button color="primary" class="sbmit padding" (click)="submitIssueForm()">Issue Certificate</button>
+
+           </div>
+
+    </form>
+    <div *ngIf="id">
+       <p>{{message}}</p> 
+       <p>Generated ID is:{{id}}</p>
+        
+
+    </div>
+    <div *ngIf="id">
+        <button mat-button color="primary" class="sbmit padding" routerLink="/verify-certificate" >Verify Certificate</button>
+    </div>
+    </div>
+    
+</div>
