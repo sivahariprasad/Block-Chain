@@ -26,3 +26,8 @@
 .center{
     margin-left:43%;
 }
+.spinning{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

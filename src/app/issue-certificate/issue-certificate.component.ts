@@ -14,6 +14,7 @@ export class IssueCertificateComponent implements OnInit {
   issueFormDetails:any;
   message:any;
   id:any;
+  spinner=false;
   
 
   constructor(private fb: FormBuilder, private certificateService:CertificateService) { }
@@ -28,6 +29,7 @@ export class IssueCertificateComponent implements OnInit {
     })
   }
   submitIssueForm(){
+    this.spinner=true;
     console.log(this.issueCertificateForm.value);
     this.certificateService.sendIssueCertificateForm(this.issueCertificateForm.value).subscribe((res)=>{
       console.log(res);

@@ -36,6 +36,7 @@
                   
                 />   
         </mat-form-field>
+        <mat-spinner class="spinning" *ngIf="!id && spinner" diameter="50"></mat-spinner>
         <div class="fifthblock" *ngIf="!id">
             <button mat-button color="primary" class="sbmit padding" (click)="submitIssueForm()">Issue Certificate</button>
 

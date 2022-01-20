@@ -9,6 +9,7 @@ import { CertificateService } from '../certificate.service';
 })
 export class VerifyCertificateComponent implements OnInit {
   verifyForm!: FormGroup;
+  spinner= false;
 
   constructor(private fb: FormBuilder, private certificateService:CertificateService) { }
 
@@ -20,9 +21,11 @@ export class VerifyCertificateComponent implements OnInit {
     })
   }
   submitId(){
+    this.spinner = true;
     console.log(this.verifyForm.value.pasteId);
     this.certificateService.getVerifyCertificate(this.verifyForm.value.pasteId).subscribe((res)=>{
       console.log(res);
+      this.spinner = false;
       const file = new Blob([res], { type: 'application/pdf' });
         const anchor = document.createElement('a');
         const fileURL = window.URL.createObjectURL(file);
